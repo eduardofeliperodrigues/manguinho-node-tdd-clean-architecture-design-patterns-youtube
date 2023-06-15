@@ -6,6 +6,10 @@ class EmailValidator {
   }
 }
 
+const makeSUT = () => {
+  return new EmailValidator()
+}
+
 describe('Email validator', () => {
   test('Should return true if validator return true', () => {
     const sut = new EmailValidator()
@@ -15,7 +19,7 @@ describe('Email validator', () => {
 
   test('Should return false if validator return false', () => {
     validator.isEmailValid = false
-    const sut = new EmailValidator()
+    const sut = makeSUT()
     const isEmailInvalid = sut.isValid('invalid_email@mail.com')
     expect(isEmailInvalid).toBe(false)
   })
