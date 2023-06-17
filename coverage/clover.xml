@@ -1,48 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1687012474226" clover="3.2.0">
-  <project timestamp="1687012474226" name="All files">
-    <metrics statements="30" coveredstatements="30" conditionals="14" coveredconditionals="14" methods="2" coveredmethods="2" elements="46" coveredelements="46" complexity="0" loc="30" ncloc="30" packages="2" files="2" classes="2"/>
-    <package name="domain.usecases">
-      <metrics statements="23" coveredstatements="23" conditionals="14" coveredconditionals="14" methods="2" coveredmethods="2"/>
-      <file name="auth-usecase.js" path="/home/eduardo/projetos-pessoais/estudos-cleanArc-TDD-js-ts-projetos/manguinho-node-tdd-clean-architecture-design-patterns-youtube/src/domain/usecases/auth-usecase.js">
-        <metrics statements="23" coveredstatements="23" conditionals="14" coveredconditionals="14" methods="2" coveredmethods="2"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="10" type="stmt"/>
-        <line num="6" count="10" type="stmt"/>
-        <line num="7" count="10" type="stmt"/>
-        <line num="8" count="10" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="11" count="10" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="10" type="cond" truecount="2" falsecount="0"/>
-        <line num="13" count="10" type="cond" truecount="2" falsecount="0"/>
-        <line num="14" count="10" type="cond" truecount="2" falsecount="0"/>
-        <line num="15" count="6" type="cond" truecount="1" falsecount="0"/>
-        <line num="16" count="6" type="stmt"/>
-        <line num="17" count="10" type="cond" truecount="1" falsecount="0"/>
-        <line num="18" count="5" type="cond" truecount="1" falsecount="0"/>
-        <line num="19" count="10" type="cond" truecount="1" falsecount="0"/>
-        <line num="20" count="4" type="cond" truecount="1" falsecount="0"/>
-        <line num="21" count="4" type="stmt"/>
-        <line num="22" count="4" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="utils.errors">
-      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="index.js" path="/home/eduardo/projetos-pessoais/estudos-cleanArc-TDD-js-ts-projetos/manguinho-node-tdd-clean-architecture-design-patterns-youtube/src/utils/errors/index.js">
-        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-      </file>
-    </package>
+<coverage generated="1687012865221" clover="3.2.0">
+  <project timestamp="1687012865221" name="All files">
+    <metrics statements="36" coveredstatements="36" conditionals="13" coveredconditionals="13" methods="2" coveredmethods="2" elements="51" coveredelements="51" complexity="0" loc="36" ncloc="36" packages="1" files="1" classes="1"/>
+    <file name="auth-usecase.js" path="/home/eduardo/projetos-pessoais/estudos-cleanArc-TDD-js-ts-projetos/manguinho-node-tdd-clean-architecture-design-patterns-youtube/src/domain/usecases/auth-usecase.js">
+      <metrics statements="36" coveredstatements="36" conditionals="13" coveredconditionals="13" methods="2" coveredmethods="2"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="5" count="10" type="stmt"/>
+      <line num="6" count="10" type="stmt"/>
+      <line num="7" count="10" type="stmt"/>
+      <line num="8" count="10" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="10" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="11" count="10" type="cond" truecount="1" falsecount="0"/>
+      <line num="12" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="13" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="15" count="6" type="cond" truecount="1" falsecount="0"/>
+      <line num="16" count="6" type="stmt"/>
+      <line num="17" count="6" type="stmt"/>
+      <line num="18" count="6" type="stmt"/>
+      <line num="19" count="6" type="stmt"/>
+      <line num="20" count="6" type="stmt"/>
+      <line num="21" count="6" type="stmt"/>
+      <line num="22" count="6" type="stmt"/>
+      <line num="23" count="6" type="stmt"/>
+      <line num="24" count="6" type="stmt"/>
+      <line num="25" count="6" type="stmt"/>
+      <line num="26" count="6" type="stmt"/>
+      <line num="27" count="10" type="cond" truecount="1" falsecount="0"/>
+      <line num="28" count="5" type="stmt"/>
+      <line num="29" count="5" type="cond" truecount="1" falsecount="0"/>
+      <line num="30" count="4" type="stmt"/>
+      <line num="31" count="4" type="stmt"/>
+      <line num="32" count="4" type="stmt"/>
+      <line num="33" count="5" type="cond" truecount="1" falsecount="0"/>
+      <line num="34" count="2" type="stmt"/>
+      <line num="35" count="2" type="stmt"/>
+      <line num="36" count="1" type="stmt"/>
+    </file>
   </project>
 </coverage>
