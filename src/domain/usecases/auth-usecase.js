@@ -17,6 +17,7 @@ module.exports = class AuthUseCase {
     if (!user) return null
     const isValidPassword = await this.encrypter.compare(password, user.hashedPassword)
     if (!isValidPassword) return null
-    await this.tokenGenerator.generate(user.id)
+    const accessToken = await this.tokenGenerator.generate(user.id)
+    return accessToken
   }
 }
