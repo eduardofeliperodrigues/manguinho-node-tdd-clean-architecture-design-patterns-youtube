@@ -34,7 +34,7 @@ describe('LoadUserByEmail Repository', () => {
   })
 
   beforeEach(async () => {
-    await db.collection('users').deleteMany()
+    await db.collection('users').deleteMany({})
   })
 
   afterAll(async () => {
@@ -49,10 +49,16 @@ describe('LoadUserByEmail Repository', () => {
 
   test('Should return an user if user is found', async () => {
     const { sut, userModel } = makeSUT()
-    await userModel.insertOne({
-      email: 'valid_email@mail.com'
-    })
+    const mockUser = {
+      email: 'valid_email@mail.com',
+      name: 'any_name',
+      age: 50,
+      state: 'any_state',
+      password: 'hashed_password'
+    }
+    const fakeUser = await userModel.insertOne(mockUser)
+    console.log(fakeUser.insertedId)
     const user = await sut.load('valid_email@mail.com')
-    expect(user.email).toBe('valid_email@mail.com')
+    expect(user).toEqual(mockUser)
   })
 })
