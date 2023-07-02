@@ -2,11 +2,13 @@
   "name": "manguinho-node-tdd-clean-architecture-design-patterns-youtube",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/main/index.js",
   "scripts": {
-    "test": "jest --colors --noStackTrace --passWithNoTests",
+    "start": "node src/main/index.js",
+    "test": "jest --colors --noStackTrace --passWithNoTests --runInBand",
     "test:unit": "npm test -- --watch -c jest-unit-config.js",
-    "test:staged": "npm test -- --findRelatedTests --silent -c jest-integration-config.js",
+    "test:integration": "npm test -- --watch -c jest-integration-config.js",
+    "test:staged": "npm test -- --findRelatedTests --silent",
     "test:ci": "npm test -- --coverage --silent"
   },
   "standard": {
@@ -20,7 +22,8 @@
   "devDependencies": {
     "@shelf/jest-mongodb": "^4.1.7",
     "jest": "^29.5.0",
-    "standard": "^17.1.0"
+    "standard": "^17.1.0",
+    "supertest": "^6.3.3"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
