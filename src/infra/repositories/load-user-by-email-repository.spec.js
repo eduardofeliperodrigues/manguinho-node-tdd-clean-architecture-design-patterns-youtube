@@ -42,8 +42,7 @@ describe('LoadUserByEmail Repository', () => {
       state: 'any_state',
       password: 'hashed_password'
     }
-    const fakeUser = await userModel.insertOne(mockUser)
-    console.log(fakeUser.insertedId)
+    await userModel.insertOne(mockUser)
     const user = await sut.load('valid_email@mail.com')
     expect(user).toEqual(mockUser)
   })
