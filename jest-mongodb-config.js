@@ -8,6 +8,5 @@ module.exports = {
     instance: {
       dbName: 'jest'
     }
-  },
-  mongoURLEnvName: 'MONGODB_URI'
+  }
 }
