@@ -4,11 +4,9 @@ const MongoHelper = require('../helpers/mongo-helper')
 let db, fakeUser
 
 const makeSUT = () => {
-  const userModel = db.collection('users')
-  const sut = new UpdateAccessTokenRepository(userModel)
+  const sut = new UpdateAccessTokenRepository()
   return {
-    sut,
-    userModel
+    sut
   }
 }
 
@@ -19,8 +17,7 @@ describe('UpdateAccessToken Repository', () => {
   })
 
   beforeEach(async () => {
-    const userModel = db.collection('users')
-    await userModel.deleteMany({})
+    await db.collection('users').deleteMany({})
     const mockUser = {
       email: 'valid_email@mail.com',
       name: 'any_name',
@@ -28,7 +25,7 @@ describe('UpdateAccessToken Repository', () => {
       state: 'any_state',
       password: 'hashed_password'
     }
-    fakeUser = await userModel.insertOne(mockUser)
+    fakeUser = await db.collection('users').insertOne(mockUser)
   })
 
   afterAll(async () => {
@@ -36,17 +33,11 @@ describe('UpdateAccessToken Repository', () => {
   })
 
   test('Should update the user with given accessToken', async () => {
-    const { userModel, sut } = makeSUT()
+    const { sut } = makeSUT()
 
     await sut.update(fakeUser.insertedId, 'valid_token')
-    const updatedFakeUser = await userModel.findOne({ _id: fakeUser.insertedId })
+    const updatedFakeUser = await db.collection('users').findOne({ _id: fakeUser.insertedId })
     expect(updatedFakeUser.accessToken).toBe('valid_token')
-  })
-
-  test('Should throw if no userModel is provided', async () => {
-    const sut = new UpdateAccessTokenRepository()
-    const promise = sut.update(fakeUser.insertedId, 'valid_token')
-    await expect(promise).rejects.toThrow()
   })
 
   test('Should throw if no params are provided', async () => {
