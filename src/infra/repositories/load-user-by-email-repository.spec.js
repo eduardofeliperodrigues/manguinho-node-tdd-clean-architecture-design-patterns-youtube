@@ -14,11 +14,11 @@ const makeSUT = () => {
 describe('LoadUserByEmail Repository', () => {
   beforeAll(async () => {
     await MongoHelper.connect(process.env.MONGO_URL)
-    db = await MongoHelper.db()
+    db = await MongoHelper.db('users')
   })
 
   beforeEach(async () => {
-    await db.collection('users').deleteMany({})
+    await db.deleteMany({})
   })
 
   afterAll(async () => {
@@ -40,7 +40,7 @@ describe('LoadUserByEmail Repository', () => {
       state: 'any_state',
       password: 'hashed_password'
     }
-    await db.collection('users').insertOne(mockUser)
+    await db.insertOne(mockUser)
     const user = await sut.load('valid_email@mail.com')
     expect(user).toEqual(mockUser)
   })

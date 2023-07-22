@@ -10,7 +10,7 @@ module.exports = {
 
   async db (dbName) {
     const db = await this.connection.db(dbName)
-    return db
+    return db.collection(dbName)
   },
 
   async disconnect () {

@@ -13,11 +13,11 @@ const makeSUT = () => {
 describe('UpdateAccessToken Repository', () => {
   beforeAll(async () => {
     await MongoHelper.connect(global.__MONGO_URI__)
-    db = await MongoHelper.db()
+    db = await MongoHelper.db('users')
   })
 
   beforeEach(async () => {
-    await db.collection('users').deleteMany({})
+    await db.deleteMany({})
     const mockUser = {
       email: 'valid_email@mail.com',
       name: 'any_name',
@@ -25,7 +25,7 @@ describe('UpdateAccessToken Repository', () => {
       state: 'any_state',
       password: 'hashed_password'
     }
-    fakeUser = await db.collection('users').insertOne(mockUser)
+    fakeUser = await db.insertOne(mockUser)
   })
 
   afterAll(async () => {
@@ -36,7 +36,7 @@ describe('UpdateAccessToken Repository', () => {
     const { sut } = makeSUT()
 
     await sut.update(fakeUser.insertedId, 'valid_token')
-    const updatedFakeUser = await db.collection('users').findOne({ _id: fakeUser.insertedId })
+    const updatedFakeUser = await db.findOne({ _id: fakeUser.insertedId })
     expect(updatedFakeUser.accessToken).toBe('valid_token')
   })
 
