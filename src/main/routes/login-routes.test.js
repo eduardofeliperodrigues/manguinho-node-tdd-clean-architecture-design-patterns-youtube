@@ -32,4 +32,19 @@ describe('Login Routes', () => {
       })
       .expect(200)
   })
+
+  test('Should return 401 when invalid credentials are provided', async () => {
+    const mockUser = {
+      email: 'valid_email@mail.com',
+      password: bcrypt.hashSync('hashed_password', 10)
+    }
+    await db.insertOne(mockUser)
+    await request(app)
+      .post('/api/login')
+      .send({
+        email: 'valid_email@mail.com',
+        password: 'invalid_password'
+      })
+      .expect(401)
+  })
 })
