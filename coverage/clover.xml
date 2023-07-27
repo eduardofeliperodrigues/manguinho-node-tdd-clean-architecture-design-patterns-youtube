@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1690131958079" clover="3.2.0">
-  <project timestamp="1690131958079" name="All files">
-    <metrics statements="222" coveredstatements="222" conditionals="58" coveredconditionals="58" methods="21" coveredmethods="21" elements="301" coveredelements="301" complexity="0" loc="222" ncloc="222" packages="8" files="15" classes="15"/>
+<coverage generated="1690420790696" clover="3.2.0">
+  <project timestamp="1690420790696" name="All files">
+    <metrics statements="228" coveredstatements="228" conditionals="58" coveredconditionals="58" methods="21" coveredmethods="21" elements="307" coveredelements="307" complexity="0" loc="228" ncloc="228" packages="8" files="15" classes="15"/>
     <package name="domain.usecases">
       <metrics statements="36" coveredstatements="36" conditionals="13" coveredconditionals="13" methods="2" coveredmethods="2"/>
       <file name="auth-usecase.js" path="/home/eduardo/projetos-pessoais/estudos-typescript-javascript/estudos-cleanArc-TDD-js-ts-projetos/manguinho-node-tdd-clean-architecture-design-patterns-youtube/src/domain/usecases/auth-usecase.js">
@@ -138,9 +138,9 @@
       </file>
     </package>
     <package name="presentation.helpers">
-      <metrics statements="31" coveredstatements="31" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+      <metrics statements="37" coveredstatements="37" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
       <file name="http-response.js" path="/home/eduardo/projetos-pessoais/estudos-typescript-javascript/estudos-cleanArc-TDD-js-ts-projetos/manguinho-node-tdd-clean-architecture-design-patterns-youtube/src/presentation/helpers/http-response.js">
-        <metrics statements="31" coveredstatements="31" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+        <metrics statements="37" coveredstatements="37" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -150,28 +150,34 @@
         <line num="7" count="3" type="stmt"/>
         <line num="8" count="3" type="stmt"/>
         <line num="9" count="3" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="10" type="stmt"/>
-        <line num="13" count="10" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="14" count="10" type="stmt"/>
         <line num="15" count="10" type="stmt"/>
         <line num="16" count="10" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="18" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="21" count="2" type="stmt"/>
-        <line num="22" count="2" type="stmt"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="18" count="10" type="stmt"/>
+        <line num="19" count="10" type="stmt"/>
+        <line num="20" count="10" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="23" count="2" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="25" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="26" count="4" type="stmt"/>
-        <line num="27" count="4" type="stmt"/>
-        <line num="28" count="4" type="stmt"/>
-        <line num="29" count="4" type="stmt"/>
-        <line num="30" count="4" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="32" count="4" type="stmt"/>
+        <line num="33" count="4" type="stmt"/>
+        <line num="34" count="4" type="stmt"/>
+        <line num="35" count="4" type="stmt"/>
+        <line num="36" count="4" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
       </file>
     </package>
     <package name="presentation.routers">
